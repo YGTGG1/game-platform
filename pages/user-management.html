@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>用户管理</title>
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/user-management.css">
+</head>
+
+<body>
+    <!-- 导航栏，与首页保持一致 -->
+    <nav>
+        <!-- <div class="logo">游戏联运平台后台</div> -->
+        <ul class="nav-links">
+            <li><a href="../pages/index.html">首页</a></li>
+            <li><a href="../pages/game-management.html">游戏管理</a></li>
+            <li><a href="../pages/user-management.html">用户管理</a></li>
+            <li><a href="../pages/data-statistics.html">数据统计</a></li>
+            <li><a href="../pages/system-settings.html">系统设置</a></li>
+        </ul>
+        <div class="user-info">
+            <span>管理员</span>
+            <a href="#" class="logout">退出</a>
+        </div>
+    </nav>
+
+    <!-- 用户管理内容 -->
+    <section class="user-management-content">
+        <div class="white-container">
+            <h2>用户管理</h2>
+            <!-- 搜索框和按钮容器 -->
+            <div class="search-container">
+                <input type="text" id="user-search" placeholder="搜索用户名">
+                <button id="search-button">搜索</button>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>用户 ID</th>
+                        <th>用户名</th>
+                        <th>注册时间</th>
+                        <th>最近登录时间</th>
+                        <th>状态</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody id="user-table-body">
+                    <tr>
+                        <td>1</td>
+                        <td>user1</td>
+                        <td>2025-01-10</td>
+                        <td>2025-02-07</td>
+                        <td>正常</td>
+                        <td>
+                            <a href="#" class="btn">查看详情</a>
+                            <a href="#" class="btn">封禁</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>user2</td>
+                        <td>2025-02-01</td>
+                        <td>2025-02-06</td>
+                        <td>封禁中</td>
+                        <td>
+                            <a href="#" class="btn">查看详情</a>
+                            <a href="#" class="btn">解封</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <!-- 分页部分 -->
+            <div class="pagination">
+                <a href="#" class="prev">上一页</a>
+                <a href="#" class="page-num">1</a>
+                <a href="#" class="page-num">2</a>
+                <a href="#" class="page-num">3</a>
+                <a href="#" class="next">下一页</a>
+            </div>
+        </div>
+    </section>
+    <script>
+        const searchInput = document.getElementById('user-search');
+        const searchButton = document.getElementById('search-button');
+        const tableBody = document.getElementById('user-table-body');
+        const tableRows = tableBody.querySelectorAll('tr');
+
+        function searchUsers() {
+            const searchTerm = searchInput.value.trim().toLowerCase();
+            tableRows.forEach(row => {
+                const userName = row.children[1].textContent.toLowerCase();
+                if (userName.includes(searchTerm)) {
+                    row.style.display = '';
+                } else {
+                    row.style.display = 'none';
+                }
+            });
+        }
+
+        searchButton.addEventListener('click', searchUsers);
+        searchInput.addEventListener('input', searchUsers);
+    </script>
+</body>
+
+</html>

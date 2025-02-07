@@ -1,0 +1,209 @@
+        /* 全局样式 */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        /* 导航栏样式 */
+        nav {
+            background-color: #333;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+
+        .nav-links {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        .nav-links li {
+            margin-right: 20px;
+        }
+
+        .nav-links li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .nav-links li a.active {
+            color: #007BFF;
+            font-weight: bold;
+        }
+
+        .user-info {
+            display: flex;
+            align-items: center;
+        }
+
+        .user-info span {
+            margin-right: 10px;
+        }
+
+        .logout {
+            color: white;
+            text-decoration: none;
+        }
+
+        /* 子菜单栏样式 */
+        .sub-nav {
+            background-color: #f4f4f4;
+            padding: 10px 0;
+        }
+
+        .sub-nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .sub-nav ul li {
+            margin: 0 10px;
+        }
+
+        .sub-nav ul li a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        .sub-nav ul li a:hover {
+            color: #007BFF;
+        }
+
+        .sub-nav ul li a.active {
+            color: #007BFF;
+            font-weight: bold;
+        }
+
+        /* 分页样式 */
+        .pagination {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .pagination a {
+            margin: 0 5px;
+            text-decoration: none;
+            color: #333;
+            border: 1px solid #ccc;
+            padding: 5px 10px;
+            border-radius: 4px;
+        }
+
+        .pagination a:hover {
+            background-color: #eee;
+        }
+
+        .pagination a.active {
+            background-color: #007BFF;
+            color: white;
+        }
+
+        /* 搜索框和按钮样式 */
+        .search-container {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        #game-search {
+            padding: 8px 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px 0 0 4px;
+            width: 200px;
+            transition: border-color 0.3s ease;
+        }
+
+        #game-search::placeholder {
+            color: #999;
+        }
+
+        #game-search:focus {
+            border-color: #66afe9;
+            outline: none;
+        }
+
+        #search-button {
+            padding: 8px 15px;
+            border: 1px solid #007BFF;
+            background-color: #007BFF;
+            color: white;
+            border-radius: 0 4px 4px 0;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        #search-button:hover {
+            background-color: #0056b3;
+        }
+
+        /* 游戏列表样式 */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        table th,
+        table td {
+            border: 1px solid #ccc;
+            padding: 8px;
+            text-align: left;
+        }
+
+        table th {
+            background-color: #f0f0f0;
+        }
+
+        table tbody tr:hover {
+            background-color: #f9f9f9;
+        }
+
+        /* 内容区域样式 */
+        .content-section {
+            display: none;
+            background-color: white;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .content-section.active {
+            display: block;
+        }
+
+        /* 快捷操作区域样式 */
+        /* .quick-actions {
+            background-color: white;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .quick-actions h2 {
+            margin-bottom: 20px;
+        } */
+
+        .btn {
+            display: inline-block;
+            background-color: #007BFF;
+            color: white;
+            padding: 8px 16px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
