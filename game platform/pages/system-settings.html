@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>系统设置</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body>
+    <!-- 导航栏，与首页保持一致 -->
+    <nav>
+        <!-- <div class="logo">游戏联运平台后台</div> -->
+        <ul class="nav-links">
+            <li><a href="../pages/index.html">首页</a></li>
+            <li><a href="../pages/game-management.html">游戏管理</a></li>
+            <li><a href="../pages/user-management.html">用户管理</a></li>
+            <li><a href="../pages/data-statistics.html">数据统计</a></li>
+            <li><a href="../pages/system-settings.html">系统设置</a></li>
+        </ul>
+        <div class="user-info">
+            <span>管理员</span>
+            <a href="#" class="logout">退出</a>
+        </div>
+    </nav>
+
+    <!-- 系统设置内容 -->
+    <section class="system-settings-content">
+        <h2>系统设置</h2>
+        <form onsubmit="return validateSettingsForm()">
+            <label for="game-server-url">游戏服务器地址：</label>
+            <input type="text" id="game-server-url" name="game-server-url" value="http://example.com"><br>
+            <label for="data-backup-interval">数据备份间隔（小时）：</label>
+            <input type="number" id="data-backup-interval" name="data-backup-interval" value="24"><br>
+            <input type="submit" value="保存设置" class="btn">
+        </form>
+    </section>
+</body>
+
+</html>

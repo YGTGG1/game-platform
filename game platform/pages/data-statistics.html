@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数据统计</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <!-- 引入 ECharts 库 -->
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.2/dist/echarts.min.js"></script>
+</head>
+
+<body>
+    <!-- 导航栏，与首页保持一致 -->
+    <nav>
+        <!-- <div class="logo">游戏联运平台后台</div> -->
+        <ul class="nav-links">
+            <li><a href="../pages/index.html">首页</a></li>
+            <li><a href="../pages/game-management.html">游戏管理</a></li>
+            <li><a href="../pages/user-management.html">用户管理</a></li>
+            <li><a href="../pages/data-statistics.html">数据统计</a></li>
+            <li><a href="../pages/system-settings.html">系统设置</a></li>
+        </ul>
+        <div class="user-info">
+            <span>管理员</span>
+            <a href="#" class="logout">退出</a>
+        </div>
+    </nav>
+
+    <!-- 数据统计内容 -->
+    <section class="data-statistics-content">
+        <h2>数据统计</h2>
+        <div id="stat-chart1" style="width: 100%; height: 400px;"></div>
+        <div id="stat-chart2" style="width: 100%; height: 400px;"></div>
+    </section>
+    <script src="../scripts/data-statistics/data-statistics-script.js"></script>
+</body>
+
+</html>
